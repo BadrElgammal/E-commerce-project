@@ -1,0 +1,36 @@
+nav
+{
+    height: 70px;
+    z-index: 999;
+}
+.active
+{
+    color: #FF9F0D;
+}
+span
+{
+    color: #FF9F0D;
+}
+.navbar-collapse
+{
+    background-color: rgba(0,0,0,0.9);
+    padding: 10px;
+}
+nav ul a
+{
+    color: white;
+}
+nav ul a:hover
+{
+    color: #FF9F0D;
+}
+nav ul .active
+{
+    color: #FF9F0D;
+}
+nav .icons .icon
+{
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+}
