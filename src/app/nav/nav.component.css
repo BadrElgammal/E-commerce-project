@@ -2,6 +2,7 @@ nav
 {
     height: 70px;
     z-index: 999;
+    background-color: #0D0D0D !important;
 }
 .active
 {
@@ -13,7 +14,7 @@ span
 }
 .navbar-collapse
 {
-    background-color: rgba(0,0,0,0.9);
+    background-color:#0D0D0D !important;;
     padding: 10px;
 }
 nav ul a
