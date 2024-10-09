@@ -26,11 +26,19 @@ nav ul a:hover
 }
 nav ul .active
 {
-    color: #FF9F0D;
+    color: rgb(255, 159, 13);
 }
 nav .icons .icon
 {
     width: 20px;
     height: 20px;
     margin: 0 5px;
+    cursor: pointer;
+}
+nav .icons .icon:hover
+{
+    color: #FF9F0D !important;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(255, 159, 13)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }

@@ -2,10 +2,10 @@
 <nav class="position-fixed vw-100 navbar navbar-dark navbar-expand-lg bg-black">
     <div class="container-fluid container ">
         <h2 class="text-white">Food<span class="">tuck</span></h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler order-1 border-warning text-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <div class="collapse navbar-collapse order-2 " id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto ">
           <li class="nav-item">
             <a  class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
@@ -29,11 +29,11 @@
             <a class="nav-link" routerLink="/Contact" routerLinkActive="active">Contact</a>
           </li>
         </ul>
-        <div class="icons  ">
-            <ng-icon class="icon text-white" name="heroMagnifyingGlass"></ng-icon>
-            <ng-icon class="icon text-white" name="heroUser"></ng-icon>
-            <ng-icon class="icon text-white" name="heroShoppingCart"></ng-icon>
       </div>
-      </div>
+      <div class="icons order-xxl-3 order-xl-3  order-lg-3">
+          <ng-icon class="icon text-white " name="heroMagnifyingGlass"></ng-icon>
+          <ng-icon class="icon text-white" name="heroUser"></ng-icon>
+          <ng-icon class="icon text-white" name="heroShoppingCart"></ng-icon>
+    </div>
     </div>
   </nav>
