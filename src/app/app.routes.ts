@@ -6,6 +6,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { BlogComponent } from './blog/blog.component';
 import { AboutComponent } from './about/about.component';
 import { SingleProductComponent } from './single-product/single-product.component';
+import { OurChefComponent } from './our-chef/our-chef.component';
 
 export const routes: Routes = 
 [
@@ -36,6 +37,10 @@ export const routes: Routes =
     {
         path:'shop/:id',
         component:SingleProductComponent
+    },
+    {
+        path:'ourChef',
+        component:OurChefComponent
     },
     {
         path:'**',
