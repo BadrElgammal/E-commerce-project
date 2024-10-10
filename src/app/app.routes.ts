@@ -5,6 +5,7 @@ import { ShopComponent } from './shop/shop.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { BlogComponent } from './blog/blog.component';
 import { AboutComponent } from './about/about.component';
+import { SingleProductComponent } from './single-product/single-product.component';
 
 export const routes: Routes = 
 [
@@ -31,6 +32,10 @@ export const routes: Routes =
     {
         path:'shop',
         component:ShopComponent
+    },
+    {
+        path:'shop/:id',
+        component:SingleProductComponent
     },
     {
         path:'**',

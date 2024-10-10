@@ -1,0 +1,81 @@
+/* ------------------------head------------------- */
+.heade
+{
+    margin-top: 50px;
+    height: 300px;
+    overflow: hidden;
+}
+.heade img
+{
+    width: 100vw;
+    height: 100%;
+}
+.heade span
+{
+    color: #FF9F0D;
+    cursor: pointer;
+}
+
+
+
+
+.option
+{
+    box-shadow: 1px 1px 3px black;
+}
+.option .input-group
+{
+    margin-top: 20px;
+}
+.option .input-group input
+{
+    width: 80%;
+    border: none;
+    background-color: #fff5e6;
+    padding-left: 10px;
+    height: 40px;
+}
+.option .input-group .input-group-text
+{
+    background-color: #FF9F0D;
+    color: white;
+}
+.category-section h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .category-section ul {
+    padding-left: 0;
+  }
+  .price-filter h5 {
+    margin-top: 30px;
+  }
+  
+  .card-body h5 {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .card-body p {
+    font-size: 1rem;
+    color: #FF9F0D;
+  }
+.products
+{
+    box-shadow: 1px 1px 8px black;
+}  
+
+.products .card .btn {
+    top: -20px;
+    height: 40px;
+    background-color: white;
+    border-radius: 30px;
+    color: #FF9F0D;
+    border-color: #FF9F0D;
+}
+.products .card .btn:hover
+{
+    color: white;
+    background-color: #FF9F0D;
+}
