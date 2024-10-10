@@ -1,3 +1,84 @@
-<div class="contaner vh-100 vw-100 bg-warning d-flex justify-content-center align-items-center">
-    <h1>Shop page</h1>
+<div class=" heade position-relative vw-100 d-flex justify-content-center align-items-center">
+    <img class="position-absolute" src="assets/images/banner.2658b6c4e890de0b918c.png" alt="">
+    <div  class="text text-center text-white position-absolute">
+        <h1>Our Shop</h1>
+        <p><a class="text-decoration-none text-white" routerLink="/home">Home </a> > <span>shop</span></p>
+    </div>
 </div>
+
+
+
+
+
+<div class="container mt-5 py-5">
+    <div class="row">
+
+
+        <div class="option col-md-3 order-xl-1 order-lg-1 order-md-1">
+            <div class="input-group mb-3 text-center">
+                <input type="search" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" #inp  (input)="getInputData(inp)">
+                <span class="input-group-text" id="basic-addon1"><ng-icon name="heroMagnifyingGlass"></ng-icon></span>
+              </div>
+              <div class="category-section">
+                <h5>Category</h5>
+                <ul class="list-unstyled">
+                    <li><input type="checkbox" (change)="updateCategorySelection('Pasta', $event)"> Pasta</li>
+                    <li><input type="checkbox" (change)="updateCategorySelection('Pizza', $event)"> Pizza</li>
+                    <li><input type="checkbox" (change)="updateCategorySelection('Burgers', $event)"> Burgers</li>
+                    <li><input type="checkbox" (change)="updateCategorySelection('Salads', $event)"> Salads</li>
+                    <li><input type="checkbox" (change)="updateCategorySelection('Desserts', $event)"> Desserts</li>
+                    <li><input type="checkbox" (change)="updateCategorySelection('Fish', $event)"> Fish</li>
+                    <li><input type="checkbox" (change)="updateCategorySelection('Desserts', $event)"> Desserts </li>
+                    <li><input type="checkbox" (change)="updateCategorySelection('chicken', $event)"> chicken</li>
+                    <li><input type="checkbox" (change)="updateCategorySelection('Beef', $event)"> Beef</li>
+                </ul>
+            </div>
+            
+
+            <div class="price-filter">
+              <h5>Filter By Price</h5>
+              <input type="range" class="form-range" min="1" max="100">
+            </div>
+        </div>
+  
+
+      <div class="col-md-9 ">
+        <div class="row">
+          <div class="col-12 mb-3 d-flex justify-content-between align-items-center">
+            <h3 class="m-0">Products</h3>
+            <div>
+              <label for="sort" class="form-label me-2">Sort by:</label>
+              <select class="form-select" id="sort">
+                <option value="default">Default</option>
+                <option value="price">Price</option>
+                <option value="popularity">Popularity</option>
+              </select>
+            </div>
+          </div>
+  
+
+          <div class="products container row p-2">
+            @for (product of productsArray2; track $index) 
+            {
+                @if (product.name.toLowerCase().includes(searchText.toLowerCase())) 
+                {
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6  mb-4" >
+                        <div class="card h-100 ">
+                            <img [src]="product.images[0]" class="card-img-top h-75" alt="{{product.name}}">
+                            <div class="card-body text-center position-relative">
+                              <h5 class="mt-4 card-title">{{product.name}}</h5>
+                              <p class="card-text">${{product.price}}</p>
+                              <a [routerLink]="product.id"><button class="btn btn-outline-primary position-absolute" style="bottom: 10%; left: 50%; transform: translateX(-50%);">Show More</button></a>
+                            </div>
+                          </div>
+                        </div>
+                }
+            }
+          </div>
+  
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
