@@ -35,6 +35,11 @@ export const routes: Routes =
         component:ShopComponent
     },
     {
+        path:'shop',
+        redirectTo:'shop?page=1',
+        pathMatch:'full'
+    },
+    {
         path:'shop/:id',
         component:SingleProductComponent
     },

@@ -1,0 +1,34 @@
+.small-images img {
+    max-width: 90%;
+    max-height:90px ;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 15px ;
+}
+.main-image {
+    max-width: 100%;
+    border-radius: 15px;
+}
+.product-info h1 {
+    font-size: 2rem;
+}
+.product-price {
+    font-size: 24px;
+    color: #ff5722;
+}
+.rating {
+    color: #ffc107;
+}
+.contaner
+{
+    padding: 100px 0;
+}
+.submit
+{
+    color: white;
+    background-color: #FF9F0D;
+}
+.submit:hover
+{
+    background-color: #fd7f00;
+}
