@@ -1,0 +1,61 @@
+.heade
+{
+    margin-top: 50px;
+    height: 300px;
+    overflow: hidden;
+}
+.heade img
+{
+    width: 100vw;
+    height: 100%;
+}
+.heade span
+{
+    color: #FF9F0D;
+    cursor: pointer;
+}
+
+
+body {
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+  }
+  
+  .rating {
+    font-size: 14px;
+    color: #ffa500;
+  }
+  
+  input[type="number"] {
+    border: none;
+    outline: none;
+  }
+  
+  img.img-thumbnail {
+    max-width: 100px;
+    height: auto;
+  }
+
+  @media  screen and (max-width: 700px){
+    img.img-thumbnail
+    {
+      max-width: 50px;
+    }
+    table
+    {
+      font-size: 50%;
+    }
+    table button
+    {
+      font-size: 10px;
+      padding: 5px 4px;
+    }
+    table input
+    {
+      width: 20px !important;
+    }
+    .rating {
+      font-size: 7px;
+    }
+  }
+  

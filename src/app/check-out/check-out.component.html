@@ -1,0 +1,54 @@
+    <div class="checkout-container my-5 pt-5 d-flex align-items-center justify-content-around flex-wrap">
+
+        <!-- Shipping Address Form -->
+        <div class=" col-12 col-xl-6 col-lg-4 col-md-6 col-sm-6 p-1 p-sm-2 p-md-2 p-lg-3 p-xl-3">
+            <div class="shipping-address">
+                <h2>Shipping Address</h2>
+                <form>
+                    <div class="form-row">
+                        <input type="text" placeholder="Address Line 1">
+                        <input type="text" placeholder="Address Line 2">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="Phone Number" value="0">
+                        <input type="text" placeholder="City">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="State">
+                        <input type="text" placeholder="Postal Code" value="0">
+                    </div>
+                    <div class="form-buttons">
+                        <a routerLink="/cart"><button type="button" class="btn btn-back">Back to Cart</button></a>
+                        <button type="submit" class="btn  btn-proceed">Proceed to Shipping</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Order Summary Section -->
+        <div class="col-12 col-xl-3 col-lg-4 col-md-6 col-sm-6 p-1 p-sm-2 p-md-2 p-lg-3 p-xl-3 ">
+            <div class="order-summary ">
+                <h2>Order Summary</h2>
+                <div class="order-items">
+                    @for (product of cartProducts; track $index) 
+                    {
+                        <div class="item">
+                            <img [src]="product.image" alt="Fresh Lime">
+                            <p>{{product.name}}</p>
+                            <p>${{product.price}} x {{product.amount}}</p>
+                        </div>
+                    }
+                </div>
+                <div class="summary-details">
+                    <p>Subtotal: ${{total}}</p>
+                    <p>Shipping: Free</p>
+                    <p>Discount: N/A</p>
+                    <p>Total: ${{total}}</p>
+                </div>
+                <div class="payment-buttons">
+                    <button class="btn  flutterwave">Pay with Flutterwave</button>
+                    <button class="btn  paystack">Pay with PayStack</button>
+                </div>
+            </div>
+        </div>
+    </div>

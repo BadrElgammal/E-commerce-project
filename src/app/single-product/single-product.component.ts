@@ -31,7 +31,6 @@ export class SingleProductComponent implements OnInit {
   changeImage(ev:any)
   {
     this.mainImageSrc=ev.target.src
-    console.log(this.mainImageSrc)
   }
   
   add()
@@ -51,7 +50,7 @@ export class SingleProductComponent implements OnInit {
       id: this.productsArray[this.id - 1].id,
       name: this.productsArray[this.id - 1].name,
       price: this.productsArray[this.id - 1].price,
-      image: this.productsArray[this.id - 1].image,
+      image: this.mainImageSrc? this.mainImageSrc :this.productsArray[+this.id-1]?.images[0],
       amount: this.amount 
     };
   

@@ -31,9 +31,15 @@
         </ul>
       </div>
       <div class="icons order-xxl-3 order-xl-3  order-lg-3">
-          <ng-icon class="icon text-white " name="heroMagnifyingGlass"></ng-icon>
-          <ng-icon class="icon text-white" name="heroUser"></ng-icon>
-          <ng-icon class="icon text-white" name="heroShoppingCart"></ng-icon>
+        <ng-icon class="icon text-white" name="heroMagnifyingGlass"></ng-icon>
+        <ng-icon class="icon text-white" name="heroUser"></ng-icon>
+        <a routerLink="/cart" class="position-relative">
+            <ng-icon class="icon text-white" name="heroShoppingCart"></ng-icon>
+            <span class="badge position-absolute top-0 start-100 translate-middle bg-danger rounded-pill">
+              {{cartProducts.length}}
+            </span>
+        </a>
     </div>
+    
     </div>
   </nav>
