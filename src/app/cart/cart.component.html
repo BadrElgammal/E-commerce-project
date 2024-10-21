@@ -1,0 +1,74 @@
+
+<div class=" heade position-relative vw-100 d-flex justify-content-center align-items-center">
+  <img class="position-absolute" src="assets/images/banner.2658b6c4e890de0b918c.png" alt="">
+  <div  class="text text-center text-white position-absolute">
+      <h1 class="mb-3">Shopping Cart</h1>
+      <p><a class="text-decoration-none text-white" routerLink="/home">Home </a> > <span>cart</span></p>
+  </div>
+</div>
+
+
+<div class="container mt-5">
+  
+    
+
+    <!-- جدول المنتجات -->
+    <table class="table table-bordered text-center">
+      <thead class="table-dark">
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (product of cartProducts; track $index) 
+        {
+            <tr>
+          <td>
+            <img [src]="product.image" alt="Product Image" class="img-thumbnail ">
+            <p>{{product.name}}</p>
+            <div class="rating">⭐ ⭐ ⭐ ⭐ ☆</div>
+          </td>
+          <td>${{product.price}}</td>
+          <td>
+            <button class="btn btn-outline-secondary" (click)="minusAmount($index)">-</button>
+            <input type="number" [value]="product.amount" class="text-center" style="width: 40px;" (change)="detectChange()" [(ngModel)]="product.amount">
+            <button class="btn btn-outline-secondary" (click)="addAmount($index)">+</button>
+          </td>
+          <td>{{product.price*product.amount}}</td>
+          <td>
+            <button class="btn btn-outline-danger" (click)="deleteProduct($index)">Delete</button>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+
+    <div class="row my-5 justify-content-center">
+      <div class="col-md-6">
+        <h5>Total Bill</h5>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Cart Subtotal</span>
+            <span>{{total}}</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Shipping Charge</span>
+            <span>Free</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span>Discount</span>
+            <span>N/A</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <strong>Total Amount</strong>
+            <strong>{{total}}</strong>
+          </li>
+        </ul>
+        <a routerLink="/checkOut"><button class="btn btn-success mt-3 w-100">Proceed to Checkout</button></a>
+      </div>
+    </div>
+  </div>

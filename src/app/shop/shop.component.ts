@@ -43,6 +43,17 @@ export class ShopComponent implements OnInit {
       });
   }
 
+  ngOnInit(): void {
+    this.fetchData();
+    
+    this.route.queryParams.subscribe(params => {
+      const pageNum = params['page'];
+      if (!pageNum) {
+        this.router.navigate(['/shop'], { queryParams: { page: 1 } });
+      }
+    });
+  }
+  
   productsShow()
   {
         this.numberOfProdcuts=this.productsArray2?.length
@@ -59,17 +70,6 @@ export class ShopComponent implements OnInit {
           this.fetchData()
         }
   }
-  ngOnInit(): void {
-    this.fetchData();
-
-    this.route.queryParams.subscribe(params => {
-      const pageNum = params['page'];
-      if (!pageNum) {
-        this.router.navigate(['/shop'], { queryParams: { page: 1 } });
-      }
-    });
-  }
-
 
   getInputData(inp: HTMLInputElement) {
     this.searchText = inp.value.toLowerCase();
@@ -121,15 +121,16 @@ filteredProducts() {
 
 addCart(prod:any) {
   let product = {
+    image:prod.images[0],
     id: prod.id,
     name: prod.name,
     price: prod.price,
-    image: prod.image,
     amount: 1
   };
 
   if ("cart" in localStorage) 
   {
+    console.log(product)
         this.cartProducts = JSON.parse(localStorage.getItem("cart")!);
         let exist = this.cartProducts.find(item => item.id === product.id);
         if (exist) 
