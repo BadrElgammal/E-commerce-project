@@ -4,6 +4,23 @@ body {
     padding: 0;
     background-color: #f9f9f9;
 }
+.heade
+{
+    margin-top: 50px;
+    height: 300px;
+    overflow: hidden;
+}
+.heade img
+{
+    width: 100vw;
+    height: 100%;
+}
+.heade span
+{
+    color: #FF9F0D;
+    cursor: pointer;
+}
+
 
 
 .personal-info, .shipping-address, .order-summary {
@@ -77,10 +94,4 @@ form input {
     background-color: orange;
     color: white;
     margin-bottom: 5px;
-}
-
-.paystack {
-    width: 100%;
-    background-color: #007bff;
-    color: white;
 }

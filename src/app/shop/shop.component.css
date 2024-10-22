@@ -117,3 +117,17 @@
     background-color: white;
     color: #FF9F0D !important;
 }
+@media screen and (max-width:500px)
+{
+    .products .card .btn
+    {
+        width: 75%;
+    }
+}
+@media screen and (max-width:360px)
+{
+    .products .card .btn
+    {
+        width: 90%;
+    }
+}
