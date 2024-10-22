@@ -3,8 +3,12 @@
     "/",
     "/about",
     "/blog",
+    "/cart",
+    "/checkOut",
+    "/contact",
     "/home",
     "/menu",
+    "/ourChef",
     "/shop"
   ]
 }
