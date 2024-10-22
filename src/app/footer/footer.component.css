@@ -1,6 +1,6 @@
 footer
 {
-    padding: 100px 0;
+    padding-top: 100px 0;
     background-color: #0D0D0D !important;
 }
 .input-group
@@ -64,4 +64,9 @@ footer li
 footer li a:hover
 {
     color: #FF9F0D !important;
+}
+.footer-content
+{
+    background-color: rgb(79 79 79 );
+
 }

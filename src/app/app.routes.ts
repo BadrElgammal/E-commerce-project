@@ -9,6 +9,7 @@ import { SingleProductComponent } from './single-product/single-product.componen
 import { OurChefComponent } from './our-chef/our-chef.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckOutComponent } from './check-out/check-out.component';
+import { ContactComponent } from './contact/contact.component';
 
 export const routes: Routes = 
 [
@@ -56,6 +57,10 @@ export const routes: Routes =
     {
         path:'ourChef',
         component:OurChefComponent
+    },
+    {
+        path:'contact',
+        component:ContactComponent
     },
     {
         path:'**',
