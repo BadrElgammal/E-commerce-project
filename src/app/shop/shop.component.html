@@ -16,7 +16,7 @@
 
         <div class="option col-md-3 order-xl-1 order-lg-1 order-md-1">
             <div class="input-group mb-3 text-center">
-                <input type="search" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" #inp  (input)="getInputData(inp)">
+                <input type="search" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1" #inp  (input)="getInputData(inp)" >
                 <span class="input-group-text" id="basic-addon1"><ng-icon name="heroMagnifyingGlass"></ng-icon></span>
               </div>
               <div class="category-section">
@@ -57,14 +57,15 @@
           </div>
   
 
-          <div class="products container row p-2">
-            @for (product of productsArray2; track $index) 
+          <div class="products container  row p-2 ">
+            @for (product of productsToShow; track $index) 
             {
-                @if (product.name.toLowerCase().includes(searchText.toLowerCase())) 
-                {
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6  mb-4" >
-                        <div class="card h-100 ">
-                            <img [src]="product.images[0]" class="card-img-top h-75" alt="{{product.name}}">
+                    <div class="col-6 col-lg-4  mb-4" >
+                        <div class="card  ">
+                            <div class=" position-relative d-flex align-items-center justify-content-center h-75">
+                                <img [src]="product.images[0]" class="card-img-top h-100 w-100 position-absolute" alt="{{product.name}}">
+                                <ng-icon name="heroShoppingBag" class="position-absolute icon d-none" (click)="addCart(product)"></ng-icon>
+                            </div>
                             <div class="card-body text-center position-relative">
                               <h5 class="mt-4 card-title">{{product.name}}</h5>
                               <p class="card-text">${{product.price}}</p>
@@ -72,8 +73,13 @@
                             </div>
                           </div>
                         </div>
-                }
             }
+            <div class="pagination-buttons d-flex align-items-center justify-content-center gap-2">
+               @for (page of numberOfPages; track $index) 
+               {
+                  <a [routerLink]="['/shop']"[queryParams]="{ page: $index + 1 }" class="text-decoration-none text-white" (click)="changePage($index)">{{$index+1}}</a>
+               }
+            </div>
           </div>
   
         </div>

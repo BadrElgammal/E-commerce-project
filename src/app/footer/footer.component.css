@@ -1,6 +1,6 @@
 footer
 {
-    padding: 100px 0;
+    padding-top: 100px 0;
     background-color: #0D0D0D !important;
 }
 .input-group
@@ -64,4 +64,32 @@ footer li
 footer li a:hover
 {
     color: #FF9F0D !important;
+}
+.footer-content
+{
+    background-color: rgb(79 79 79 );
+
+}
+.footer-right {
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    color: #333;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #333;
+    color: white;
 }

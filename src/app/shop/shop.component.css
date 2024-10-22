@@ -64,6 +64,7 @@
 .products
 {
     box-shadow: 1px 1px 8px black;
+    padding-top: 20px !important;
 }  
 
 .products .card .btn {
@@ -78,4 +79,55 @@
 {
     color: white;
     background-color: #FF9F0D;
+}
+.products .card
+{
+    height: 350px;
+}
+.products .card .icon
+{
+    width: 40px;
+    padding: 15px 10px;
+    color: #FF9F0D;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.products .card:hover .icon
+{
+    display: flex !important;
+
+}
+.products .card .icon:hover
+{
+    background-color: #FF9F0D;
+    color: white;
+}
+.pagination-buttons a
+{
+    width: 30px;
+    padding: 6px 9px;
+    background-color: #FF9F0D;
+    border-radius: 10px;
+    border: 1px solid #FF9F0D !important;
+}
+.pagination-buttons a:hover
+{
+    background-color: white;
+    color: #FF9F0D !important;
+}
+@media screen and (max-width:500px)
+{
+    .products .card .btn
+    {
+        width: 75%;
+    }
+}
+@media screen and (max-width:360px)
+{
+    .products .card .btn
+    {
+        width: 90%;
+    }
 }

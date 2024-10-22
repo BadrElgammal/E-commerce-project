@@ -7,6 +7,9 @@ import { BlogComponent } from './blog/blog.component';
 import { AboutComponent } from './about/about.component';
 import { SingleProductComponent } from './single-product/single-product.component';
 import { OurChefComponent } from './our-chef/our-chef.component';
+import { CartComponent } from './cart/cart.component';
+import { CheckOutComponent } from './check-out/check-out.component';
+import { ContactComponent } from './contact/contact.component';
 
 export const routes: Routes = 
 [
@@ -35,12 +38,29 @@ export const routes: Routes =
         component:ShopComponent
     },
     {
+        path:'shop',
+        redirectTo:'shop?page=1',
+        pathMatch:'full'
+    },
+    {
         path:'shop/:id',
         component:SingleProductComponent
     },
     {
+        path:'cart',
+        component:CartComponent
+    },
+    {
+        path:'checkOut',
+        component:CheckOutComponent
+    },
+    {
         path:'ourChef',
         component:OurChefComponent
+    },
+    {
+        path:'contact',
+        component:ContactComponent
     },
     {
         path:'**',

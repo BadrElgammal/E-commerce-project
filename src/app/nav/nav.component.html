@@ -17,23 +17,26 @@
             <a class="nav-link" routerLink="/blog" routerLinkActive="active">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/pages" routerLinkActive="active">Pages</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/shop" routerLinkActive="active">Shop</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/Contact" routerLinkActive="active">Contact</a>
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
           </li>
         </ul>
       </div>
       <div class="icons order-xxl-3 order-xl-3  order-lg-3">
-          <ng-icon class="icon text-white " name="heroMagnifyingGlass"></ng-icon>
-          <ng-icon class="icon text-white" name="heroUser"></ng-icon>
-          <ng-icon class="icon text-white" name="heroShoppingCart"></ng-icon>
+        <ng-icon class="icon text-white" name="heroMagnifyingGlass"></ng-icon>
+        <ng-icon class="icon text-white" name="heroUser"></ng-icon>
+        <a routerLink="/cart" class="position-relative">
+            <ng-icon class="icon text-white" name="heroShoppingCart"></ng-icon>
+            <span class="badge position-absolute top-0 start-100 translate-middle bg-danger rounded-pill">
+              {{cartProducts.length}}
+            </span>
+        </a>
     </div>
+    
     </div>
   </nav>
